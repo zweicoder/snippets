@@ -1,0 +1,13 @@
+---
+remote:set:
+  do: exec
+  desc: Set remote as specified origin
+  command: git remote set-url <<origin>>
+branch:rename:
+  do: exec
+  desc: Rename current branch
+  command: git branch -m <<new-name>>
+init:
+  do: exec
+  desc: Initializes git repo and commits everything with 'Initial Commit' message
+  command: git init && git add -A && git commit -m 'Initial Commit'
